@@ -1,6 +1,6 @@
 {
   "name": "organize-codebase",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Quickly organize your codebase with useful automation tools in development",
   "main": "bin/organize-codebase.js",
   "bin": {
@@ -11,7 +11,7 @@
     "commit": "cz",
     "dev": "concurrently \"tsc -w\"",
     "start": "node src/organize-codebase.js",
-    "semantic-release": "semantic-release", 
+    "semantic-release": "semantic-release",
     "build": "tsc"
   },
   "keywords": [

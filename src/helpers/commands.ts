@@ -3,7 +3,7 @@ import { ICommand } from '../interfaces/command'
 export const isNPM: ICommand = {
     type: 'confirm',
     name: 'proceed',
-    message: 'Is your project an npm package? (Determines which versioning package to use)',
+    message: 'Is your project a package to be published to npm?',
     successMessage: 'Successfully initialized a git repository.',
 }
 
@@ -31,7 +31,7 @@ export const commitlint: ICommand = {
     type: 'confirm',
     name: 'proceed',
     message: 'Install Commitlint? (Lint your commit messages)',
-    commands: [{ command: 'npm', args: ['install', '@commitlint/cli', '@commitlint/config-conventional'] }],
+    commands: [{ command: 'npm', args: ['install', '@commitlint/cli', '@commitlint/config-conventional', '-D'] }],
     writeToFile: ['commitlint.config.js'],
     successMessage: 'Installed Commitlint and updated package.json.',
 }
@@ -74,9 +74,8 @@ export const semanticRelease: ICommand = {
     message: 'Configure Semantic Release? (To automate Semantic versioning - uses the Semantic Release CLI)',
     commands: [
         { command: 'npx', args: ['semantic-release-cli', 'setup'] },
-        { command: 'npm', args: ['@semantic-release/release-notes-generator'] },
-        { command: 'npm', args: ['@semantic-release/changelog'] },
-        { command: 'npm', args: ['@semantic-release/git'] },
+        { command: 'npm', args: ['install', '@semantic-release/changelog', '-D'] },
+        { command: 'npm', args: ['install', '@semantic-release/git', '-D'] },
     ],
     successMessage: 'Configured Semantic Release and updated package.json.',
 }
@@ -87,7 +86,7 @@ export const standardVersion: ICommand = {
     type: 'confirm',
     name: 'proceed',
     message: 'Configure Standard Version? (To Automate Versioning and Changelog Generation)',
-    commands: [{ command: 'npm', args: ['install', 'standard-version'] }],
+    commands: [{ command: 'npm', args: ['install', 'standard-version', '-D'] }],
     successMessage: 'Installed Standard Version and updated package.json.',
 }
 

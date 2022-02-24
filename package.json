@@ -1,6 +1,6 @@
 {
   "name": "organize-codebase",
-  "version": "1.1.5-beta.1",
+  "version": "1.2.0-beta.1",
   "description": "Quickly organize your codebase with useful automation tools in development",
   "main": "bin/organize-codebase.js",
   "bin": {
@@ -101,7 +101,7 @@
       [
         "@semantic-release/changelog",
         {
-          "changelogFile": "docs/CHANGELOG.md", 
+          "changelogFile": "docs/CHANGELOG.md",
           "changelogTitle": "Organize-Codebase Changelog"
         }
       ],

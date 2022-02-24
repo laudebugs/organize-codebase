@@ -1,3 +1,12 @@
+Organize-Codebase Changelog
+
+# [1.2.0-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.1.5-beta.1...v1.2.0-beta.1) (2022-02-24)
+
+
+### Features
+
+* show success messages on completing a config ([9e8c7fa](https://github.com/lbugasu/organize-codebase/commit/9e8c7fa65601db5e59198a8faf76b346ba7263d5))
+
 ## [1.1.5-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.1.4...v1.1.5-beta.1) (2022-02-24)
 
 

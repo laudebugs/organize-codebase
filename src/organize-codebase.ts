@@ -25,4 +25,6 @@ import { gitRepoInitialized, initializeRepo, executeConfig } from './helpers/fun
     await executeConfig(readMe)
   }
   else await executeConfig(standardVersion)
+
+  console.log(chalk.hex('#F18F01')('\nSetup complete!\n'))
 })()

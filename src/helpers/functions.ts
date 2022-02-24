@@ -33,6 +33,7 @@ export async function sh(cmd: string) {
 export function writeFile(filename: string) {
     const file = fs.readFileSync(path.join(process.cwd(), `node_modules/organize-codebase/lib/${filename}`), 'utf8')
     fs.writeFileSync(filename, file, 'utf8')
+    console.log(chalk.hex('#829CBC')(`░ Created ${filename} in base directory. ░`))
 }
 
 /**
@@ -45,10 +46,13 @@ export async function initializeRepo() {
         type: 'confirm',
         name: 'proceed',
         message: 'Looks like the current directory isn\'t a git repository. Would you like to initialize an new git repository?',
+        writeToFile: ['.gitignore'],
     }
-    const result = await executeConfig(initCommand)
-    if (result) return await sh('git init')
-    else return Promise.resolve()
+    return await executeConfig(initCommand).then(async (result)=>{
+        if (result) {
+            return await sh('git init')}
+        else return false
+    })
 }
 
 /**

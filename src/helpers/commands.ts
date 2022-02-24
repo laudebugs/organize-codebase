@@ -1,4 +1,4 @@
-import { ICommand } from './interfaces'
+import { ICommand } from '../interfaces/command'
 
 export const isNPM: ICommand = {
     type: 'confirm',

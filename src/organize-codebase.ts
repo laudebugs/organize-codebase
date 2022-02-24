@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import chalk from 'chalk'
-import { isNPM, prettier, eslint, commitlint, husky, commitizen, semanticRelease, readMe, standardVersion } from './commands'
-import { executeConfig, gitRepoInitialized, initializeRepo } from './helpers'
+import { isNPM, prettier, eslint, commitlint, husky, commitizen, semanticRelease, readMe, standardVersion } from './helpers/commands.js'
+import { gitRepoInitialized, initializeRepo, executeConfig } from './helpers/functions.js'
 
 (async()=>{
   console.log(chalk.cyan('Organize Codebases'))
@@ -10,7 +10,7 @@ import { executeConfig, gitRepoInitialized, initializeRepo } from './helpers'
   let isGitRepo = gitRepoInitialized()
   if(!isGitRepo) await initializeRepo()
   isGitRepo = gitRepoInitialized()
-  
+
   const isNPMProject = await executeConfig(isNPM)
 
   await executeConfig(prettier)

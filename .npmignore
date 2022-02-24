@@ -2,6 +2,6 @@ src
 .husky
 .git
 node_modules
-.commitlint.config.js
-.eslintrc.js
-.prettierrc.json
+./.commitlint.config.js
+./.eslintrc.js
+./.prettierrc.json

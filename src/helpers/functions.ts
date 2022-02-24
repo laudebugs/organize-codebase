@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import { exec } from 'child_process'
 import inquirer from 'inquirer'
-import { CLICommand, ICommand } from '../interfaces'
+import { CLICommand, ICommand } from '../interfaces/command'
 import spawn from 'cross-spawn'
 
 /* Create the prompter */

@@ -43,6 +43,7 @@
     "@typescript-eslint/parser": "^5.12.1",
     "commitizen": "^4.2.4",
     "concurrently": "^7.0.0",
+    "conventional-changelog-eslint": "^3.0.9",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.9.0",
     "husky": "^7.0.0",
@@ -87,12 +88,36 @@
     ],
     "plugins": [
       "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
       [
-        "@semantic-release/changelog",
+        "@semantic-release/commit-analyzer",
         {
-          "changelogFile": "docs/CHANGELOG.md"
+          "preset": "angular",
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES",
+              "BREAKING"
+            ]
+          }
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "angular",
+          "parserOpts": {
+            "noteKeywords": [
+              "BREAKING CHANGE",
+              "BREAKING CHANGES",
+              "BREAKING"
+            ]
+          },
+          "writerOpts": {
+            "commitsSort": [
+              "subject",
+              "scope"
+            ]
+          }
         }
       ],
       [

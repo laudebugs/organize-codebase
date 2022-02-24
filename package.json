@@ -1,6 +1,6 @@
 {
   "name": "organize-codebase",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "description": "Quickly organize your codebase with useful automation tools in development",
   "main": "dist/index.js",
   "bin": {

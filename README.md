@@ -1,8 +1,9 @@
 <h1 align="center">Welcome to organize-codebase 👋</h1>
 
-[![Release](https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml/badge.svg)](https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml)
-
 <p>
+  <a href="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml" target="_blank">
+    <img alt="Version" src="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml/badge.svg">
+  </a>
   <a href="https://www.npmjs.com/package/organize-codebase" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/organize-codebase.svg">
   </a>
@@ -12,7 +13,7 @@
   <a href="https://github.com/lbugasu/organize-codebase/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/lbugasu/organize-codebase/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/lbugasu/organize-codebase/blob/master/docs/LICENSE.txt" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/github/license/lbugasu/organize-codebase" />
   </a>
   <a href="https://twitter.com/lbugasu" target="_blank">

@@ -7,6 +7,7 @@ import { exec } from 'child_process'
 import spawn from 'cross-spawn'
 import inquirer from 'inquirer'
 import fs from 'fs'
+import path from 'path'
 import { CLICommand, ICommand } from './interfaces/command';
 
 // must do this initialization *before* other requires in order to work
@@ -121,7 +122,7 @@ const standardVersion: ICommand = {
   name: 'proceed', 
   message: 'Configure Standard Version? (To Automate Versioning and Changelog Generation)',
   commands: [
-    { command: 'npm', args: ['standard-version'] }
+    { command: 'npm', args: ['install', 'standard-version'] }
   ]
 }
 
@@ -156,7 +157,7 @@ async function sh(cmd: string) {
  * @param {string} filename 
  */
 function writeFile(filename: string){
-  const file = fs.readFileSync(`lib/${filename}`, 'utf8')
+  const file = fs.readFileSync(path.join(process.cwd(),`node_modules/organize-codebase/lib/${filename}`), 'utf8')
   fs.writeFileSync(filename, file, 'utf8')
 }
 
@@ -169,8 +170,9 @@ async function executeConfig(config: ICommand) {
   return prompt(config).then(async (answers) => {
     if (answers.proceed) {
       if(config.commands){
-        config.commands.forEach((command: CLICommand)=>{
-          spawn.sync(command.command, command.args, { stdio: 'inherit' })
+        config.commands.forEach(({command, args}: CLICommand)=>{
+          
+          spawn.sync(command, args, { stdio: 'inherit' })
         })
       }
       if (config.writeToFile) {

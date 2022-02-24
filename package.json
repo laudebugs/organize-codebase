@@ -74,5 +74,28 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lbugasu/organize-codebase.git"
-  }
+  }, 
+  "release": {
+    "branches": [
+        "main",
+        "next"
+    ],
+    "plugins": [
+        "@semantic-release/commit-analyzer",
+        "@semantic-release/release-notes-generator",
+        "@semantic-release/npm",
+        [
+            "@semantic-release/changelog",
+            {
+                "changelogFile": "docs/CHANGELOG.md"
+            }
+        ],
+        [
+            "@semantic-release/git",
+            {
+                "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+            }
+        ]
+    ]
+}
 }

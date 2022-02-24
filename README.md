@@ -2,13 +2,16 @@
 
 <p>
   <a href="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml" target="_blank">
-    <img alt="Version" src="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml/badge.svg">
+    <img alt="Release Pipeline" src="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml/badge.svg">
   </a>
   <a href="https://www.npmjs.com/package/organize-codebase" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/organize-codebase.svg">
   </a>
   <a href="https://github.com/lbugasu/organize-codebase#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/semantic-release/semantic-release" target="_blank">
+    <img alt="Semantic Release: Angular" src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release" />
   </a>
   <a href="https://github.com/lbugasu/organize-codebase/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />

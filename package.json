@@ -98,13 +98,14 @@
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
-      "@semantic-release/npm",
       [
         "@semantic-release/changelog",
         {
-          "changelogFile": "docs/CHANGELOG.md"
+          "changelogFile": "docs/CHANGELOG.md", 
+          "changelogTitle": "Organize-Codebase Changelog"
         }
       ],
+      "@semantic-release/npm",
       [
         "@semantic-release/git",
         {

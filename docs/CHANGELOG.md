@@ -1,3 +1,10 @@
+## [1.1.5-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.1.4...v1.1.5-beta.1) (2022-02-24)
+
+
+### Bug Fixes
+
+* import issues ([aca50f0](https://github.com/lbugasu/organize-codebase/commit/aca50f0e260951d8e203f54cd6902becf3689db7))
+
 # Change Log
 
 All notable changes to this project will be documented in this file.
@@ -54,6 +61,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * configurations ([b39b989](https://github.com/lbugasu/organize-codebase/commit/b39b989ff73966943f4166bcbc9581ec3ec9651d))
-
-
-

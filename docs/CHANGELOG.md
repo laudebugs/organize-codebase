@@ -1,3 +1,12 @@
+# Changelog
+
+# [1.2.0-beta.2](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2022-02-24)
+
+
+### Bug Fixes
+
+* shift dependencies to devDependencies ([e71c976](https://github.com/lbugasu/organize-codebase/commit/e71c9760c100c8599342cd7194f9c5789545a0e7))
+
 # [1.2.0-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.1.5-beta.1...v1.2.0-beta.1) (2022-02-24)
 
 

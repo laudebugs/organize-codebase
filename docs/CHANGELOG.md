@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.2.0-beta.3](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2022-02-24)
+
+
+### Features
+
+* notification on completing setup ([6bd915d](https://github.com/lbugasu/organize-codebase/commit/6bd915d4036633f40a6c4c40eb9954943dbbbf75))
+
 # [1.2.0-beta.2](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2022-02-24)
 
 

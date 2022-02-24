@@ -7,7 +7,7 @@ import { exec } from 'child_process'
 import spawn from 'cross-spawn'
 import inquirer from 'inquirer'
 import fs from 'fs'
-import { ICommand } from './interfaces/command';
+import { CLICommand, ICommand } from './interfaces/command';
 
 // must do this initialization *before* other requires in order to work
 if (process.argv.includes('--debug')) {
@@ -169,12 +169,12 @@ async function executeConfig(config: ICommand) {
   return prompt(config).then(async (answers) => {
     if (answers.proceed) {
       if(config.commands){
-        config.commands.forEach((command)=>{
+        config.commands.forEach((command: CLICommand)=>{
           spawn.sync(command.command, command.args, { stdio: 'inherit' })
         })
       }
       if (config.writeToFile) {
-        config.writeToFile.forEach((file)=>{
+        config.writeToFile.forEach((file: string)=>{
           writeFile(file)
         })
       }

@@ -28,17 +28,28 @@
 
 ### 🏠 [Homepage](https://github.com/lbugasu/organize-codebase)
 
-## Install
+## Description
+This Command Line Tool is useful to get up and running with the most common set ups when maintaining a JavaScript project. It handles setup of the following: 
+- [`prettier`](https://prettier.io/) - formatting code
+- [`eslint`](https://eslint.org/) - finds and fixes problems in your code
+- [`commitlint`](https://commitlint.js.org/#/) - for linting commit messages
+- [`commitizen`](http://commitizen.github.io/cz-cli/) - a cli tool to easily create good commit messages
+- [`husky`](https://typicode.github.io/husky/#/) - enforces good commit messages/code formatting
+- [`standard-version`](https://github.com/conventional-changelog/standard-version) or [`semantic-release`](https://semantic-release.gitbook.io/semantic-release/) - for npm packages
 
-```sh
-npm install organize-codebase
-```
 
 ## Usage
+As simple as running within your project directory:
 
 ```sh
 npx organize-codebase
 ```
+
+## TODO
+- [ ] Add commit commands to scripts of `package.json`
+- [ ] Add semantic-release config to `package.json`
+- [ ] Add ability to choose prettier format
+- [ ] Merge config formats if config format is found in the project
 
 ## Author
 

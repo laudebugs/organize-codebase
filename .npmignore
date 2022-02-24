@@ -1,0 +1,6 @@
+dist
+.husky
+.git
+node_modules
+.commitlint.config.js
+.eslintrc.js

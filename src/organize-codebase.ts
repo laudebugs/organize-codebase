@@ -7,6 +7,8 @@ import { exec } from 'child_process'
 import spawn from 'cross-spawn'
 import inquirer from 'inquirer'
 import fs from 'fs'
+import { ICommand } from './interfaces/command';
+
 // must do this initialization *before* other requires in order to work
 if (process.argv.includes('--debug')) {
   require('debug').enable('eslint:*,-eslint:code-path,eslintrc:*')
@@ -23,7 +25,7 @@ console.log(
 /* Create the prompter */ 
 const prompt = inquirer.createPromptModule()
 
-const isNPM = {
+const isNPM: ICommand = {
   type: 'confirm',
   name: 'proceed',
   message:
@@ -31,7 +33,7 @@ const isNPM = {
 }
 
 /* Prettier */
-const prettier = {
+const prettier: ICommand = {
   type: 'confirm',
   name: 'proceed',
   message:
@@ -43,7 +45,7 @@ const prettier = {
 }
 
 /* ESLINT */
-const eslint = {
+const eslint: ICommand = {
   type: 'confirm',
   name: 'proceed',
   message:
@@ -55,7 +57,7 @@ const eslint = {
 
 /* Commitlint */ 
 // Docs: https://github.com/conventional-changelog/commitlint#getting-started
-const commitlint = {
+const commitlint: ICommand = {
   type: 'confirm',
   name: 'proceed',
   message:
@@ -67,7 +69,7 @@ const commitlint = {
 }
 
 /* Pre-Commit Hooks (with Husky) */ 
-const husky = {
+const husky: ICommand = {
   type: 'confirm',
   name: 'proceed',
   message:
@@ -88,7 +90,7 @@ const husky = {
 
 /* Commitizen
   https://github.com/commitizen/cz-cli#installing-the-command-line-tool */
-const commitizen = {
+const commitizen: ICommand = {
   type: 'confirm', 
   name: 'proceed', 
   message: 'Add Commitizen? (A Commandline utility for easily making commits)',
@@ -100,7 +102,7 @@ const commitizen = {
 /* Semantic Release - Best for NPM Packages
    Using the semantic release CLI
    https://github.com/semantic-release/semantic-release/blob/master/docs/usage/getting-started.md#getting-started */
-const semanticRelease = {
+const semanticRelease: ICommand = {
   type: 'confirm', 
   name: 'proceed',
   message: 'Configure Semantic Release? (To automate Semantic versioning - uses the Semantic Release CLI)', 
@@ -114,7 +116,7 @@ const semanticRelease = {
 
 /* Standard Version - Best for non npm projects
  https://github.com/conventional-changelog/standard-version#standard-version */
-const standardVersion = {
+const standardVersion: ICommand = {
   type: 'confirm', 
   name: 'proceed', 
   message: 'Configure Standard Version? (To Automate Versioning and Changelog Generation)',
@@ -129,7 +131,7 @@ const standardVersion = {
  * @param {String} cmd
  * @return {Object} { stdout: String, stderr: String }
  */
-async function sh(cmd) {
+async function sh(cmd: string) {
   return new Promise(function (resolve, reject) {
     exec(cmd, (err, stdout, stderr) => {
       if (err) {
@@ -144,7 +146,7 @@ async function sh(cmd) {
  * Write to file
  * @param {string} filename 
  */
-function writeFile(filename){
+function writeFile(filename: string){
   const file = fs.readFileSync(`lib/${filename}`, 'utf8')
   fs.writeFileSync(filename, file, 'utf8')
 }
@@ -154,7 +156,7 @@ function writeFile(filename){
  * @param {Object} config 
  * @returns whether or not the user chose to execute the command
  */
-async function executeConfig(config) {
+async function executeConfig(config: ICommand) {
   return prompt(config).then(async (answers) => {
     if (answers.proceed) {
       if(config.commands){
@@ -164,7 +166,7 @@ async function executeConfig(config) {
       }
       if (config.writeToFile) {
         config.writeToFile.forEach((file)=>{
-          writeFile(fle)
+          writeFile(file)
         })
       }
     }

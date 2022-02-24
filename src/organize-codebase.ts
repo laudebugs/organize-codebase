@@ -15,6 +15,10 @@ if (process.argv.includes('--debug')) {
   require('debug').enable('eslint:*,-eslint:code-path,eslintrc:*')
 }
 
+function gitRepoInitialized(): boolean{
+  return fs.existsSync(path.join(process.cwd(), '.git'))
+}
+
 // clear()
 
 console.log(
@@ -26,6 +30,17 @@ console.log(
 /* Create the prompter */ 
 const prompt = inquirer.createPromptModule()
 
+async function initializeRepo(){
+  const initCommand: ICommand = {
+    type: 'confirm', 
+    name: 'proceed',
+    message: 'This folder is not currently a git repository. Do you want to initialize an new repository?'
+  }
+  const result = await executeConfig(initCommand)
+  if(result)
+    return await sh('git init')
+  else return Promise.resolve()
+}
 const isNPM: ICommand = {
   type: 'confirm',
   name: 'proceed',
@@ -186,11 +201,18 @@ async function executeConfig(config: ICommand) {
 }
 
 (async()=>{
+  let isGitRepo = gitRepoInitialized()
+  if(!isGitRepo){
+    await initializeRepo()
+  }
+  isGitRepo = gitRepoInitialized()
   const isNPMProject = await executeConfig(isNPM)
   await executeConfig(prettier)
   await executeConfig(eslint)
   await executeConfig(commitlint)
-  await executeConfig(husky)
+  if(isGitRepo){
+    await executeConfig(husky)
+  }
   await executeConfig(commitizen)
   if(isNPMProject){
     await executeConfig(semanticRelease)

@@ -105,7 +105,10 @@ const semanticRelease = {
   name: 'proceed',
   message: 'Configure Semantic Release? (To automate Semantic versioning - uses the Semantic Release CLI)', 
   commands: [
-    { command: 'npx', args: ['semantic-release-cli', 'setup'] }
+    { command: 'npx', args: ['semantic-release-cli', 'setup'] }, 
+    { command: 'npm', args: ['@semantic-release/release-notes-generator'] },
+    { command: 'npm', args: ['@semantic-release/changelog'] },
+    { command: 'npm', args: ['@semantic-release/git'] },
   ]
 }
 

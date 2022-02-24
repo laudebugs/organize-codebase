@@ -102,7 +102,7 @@
         "@semantic-release/changelog",
         {
           "changelogFile": "docs/CHANGELOG.md",
-          "changelogTitle": "Organize-Codebase Changelog"
+          "changelogTitle": "# Changelog"
         }
       ],
       "@semantic-release/npm",

@@ -1,5 +1,3 @@
-Organize-Codebase Changelog
-
 # [1.2.0-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.1.5-beta.1...v1.2.0-beta.1) (2022-02-24)
 
 

@@ -125,6 +125,15 @@ const standardVersion: ICommand = {
   ]
 }
 
+const readMe: ICommand = {
+  type: 'confirm', 
+  name: 'proceed', 
+  message: 'Generate QuickStart Readme? (Using readme-md-generator)',
+  commands: [
+    { command: 'npx', args: ['readme-md-generator'] }
+  ]
+}
+
 
 /**
  * Execute simple shell command (async wrapper).
@@ -183,6 +192,7 @@ async function executeConfig(config: ICommand) {
   await executeConfig(commitizen)
   if(isNPMProject){
     await executeConfig(semanticRelease)
+    await executeConfig(readMe)
   }
   else{
     await executeConfig(standardVersion)

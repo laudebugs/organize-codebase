@@ -6,6 +6,7 @@
   "bin": {
     "organize-codebase": "./bin/organize-codebase.js"
   },
+  "type": "module",
   "scripts": {
     "prepare": "husky install",
     "commit": "cz",

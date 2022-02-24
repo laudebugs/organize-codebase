@@ -21,11 +21,7 @@ function gitRepoInitialized(): boolean{
 
 // clear()
 
-console.log(
-  chalk.cyan(
-    figlet.textSync('Organize Codebases', { horizontalLayout: 'full' }),
-  ),
-)
+console.log(chalk.cyan('Organize Codebases'))
 
 /* Create the prompter */ 
 const prompt = inquirer.createPromptModule()
@@ -41,6 +37,7 @@ async function initializeRepo(){
     return await sh('git init')
   else return Promise.resolve()
 }
+
 const isNPM: ICommand = {
   type: 'confirm',
   name: 'proceed',

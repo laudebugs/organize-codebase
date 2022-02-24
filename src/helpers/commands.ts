@@ -4,6 +4,7 @@ export const isNPM: ICommand = {
     type: 'confirm',
     name: 'proceed',
     message: 'Is your project an npm package? (Determines which versioning package to use)',
+    successMessage: 'Successfully initialized a git repository.',
 }
 
 /* Prettier */
@@ -13,6 +14,7 @@ export const prettier: ICommand = {
     message: 'Install Prettier? (Standardize code format: tabs, spaces, semi-colons, e.t.c)',
     commands: [{ command: 'npm', args: ['install', 'prettier', '-D'] }],
     writeToFile: ['.prettierrc.json'],
+    successMessage: 'Installed Prettier and updated package.json.',
 }
 
 /* ESLINT */
@@ -31,6 +33,7 @@ export const commitlint: ICommand = {
     message: 'Install Commitlint? (Lint your commit messages)',
     commands: [{ command: 'npm', args: ['install', '@commitlint/cli', '@commitlint/config-conventional'] }],
     writeToFile: ['commitlint.config.js'],
+    successMessage: 'Installed Commitlint and updated package.json.',
 }
 
 /* Pre-Commit Hooks (with Husky) */
@@ -50,6 +53,7 @@ export const husky: ICommand = {
         { command: 'npm', args: ['install', 'pretty-quick', '-D'] },
         { command: 'npx', args: ['husky', 'set', '.husky/pre-commit', '"npx pretty-quick --staged"'] },
     ],
+    successMessage: 'Installed Husky, added pre-commit hooks and updated package.json.',
 }
 
 /* Commitizen
@@ -74,6 +78,7 @@ export const semanticRelease: ICommand = {
         { command: 'npm', args: ['@semantic-release/changelog'] },
         { command: 'npm', args: ['@semantic-release/git'] },
     ],
+    successMessage: 'Configured Semantic Release and updated package.json.',
 }
 
 /* Standard Version - Best for non npm projects
@@ -83,6 +88,7 @@ export const standardVersion: ICommand = {
     name: 'proceed',
     message: 'Configure Standard Version? (To Automate Versioning and Changelog Generation)',
     commands: [{ command: 'npm', args: ['install', 'standard-version'] }],
+    successMessage: 'Installed Standard Version and updated package.json.',
 }
 
 export const readMe: ICommand = {
@@ -90,4 +96,5 @@ export const readMe: ICommand = {
     name: 'proceed',
     message: 'Generate QuickStart Readme? (Using readme-md-generator)',
     commands: [{ command: 'npx', args: ['readme-md-generator'] }],
+    successMessage: 'Generated README.md.',
 }

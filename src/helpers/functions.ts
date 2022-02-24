@@ -4,6 +4,7 @@ import { exec } from 'child_process'
 import inquirer from 'inquirer'
 import { CLICommand, ICommand } from '../interfaces/command'
 import spawn from 'cross-spawn'
+import chalk from 'chalk'
 
 /* Create the prompter */
 const prompt = inquirer.createPromptModule()
@@ -11,7 +12,7 @@ const prompt = inquirer.createPromptModule()
 /**
  * Execute simple shell command (async wrapper).
  * @param {String} cmd
- * @return {Object} { stdout: String, stderr: String }
+ * @return {Promise} - Returns a promise that resolves to the output of the running the terminal
  */
 export async function sh(cmd: string) {
     return new Promise(function (resolve, reject) {
@@ -34,31 +35,42 @@ export function writeFile(filename: string) {
     fs.writeFileSync(filename, file, 'utf8')
 }
 
+/**
+ * Initialize git repo in the current directory where the command is executed.
+ * 
+ * @returns {Promise<boolean>}
+ */
 export async function initializeRepo() {
     const initCommand: ICommand = {
         type: 'confirm',
         name: 'proceed',
-        message: 'This folder is not currently a git repository. Do you want to initialize an new repository?',
+        message: 'Looks like the current directory isn\'t a git repository. Would you like to initialize an new git repository?',
     }
     const result = await executeConfig(initCommand)
     if (result) return await sh('git init')
     else return Promise.resolve()
 }
 
+/**
+ * Checks if the current directory is a git repository.
+ * 
+ * @returns {Boolean} true if git repo is initialized
+ */
 export function gitRepoInitialized(): boolean {
     return fs.existsSync(path.join(process.cwd(), '.git'))
 }
 
 /**
  * Executes a configuration command
- * @param {Object} config
+ * 
+ * @param {ICommand} config
  * @returns whether or not the user chose to execute the command
  */
 export async function executeConfig(config: ICommand) {
     return prompt(config).then(async (answers) => {
         if (answers.proceed) {
             if (config.commands) {
-                config.commands.forEach(({ command, args }: CLICommand) => {
+                config.commands.forEach(({ command, args, successMessage }: CLICommand) => {
                     spawn.sync(command, args, { stdio: 'inherit' })
                 })
             }
@@ -68,6 +80,7 @@ export async function executeConfig(config: ICommand) {
                 })
             }
         }
+        if(config.successMessage) console.log(chalk.grey(config.successMessage), chalk.green('✔'))
         return answers.proceed
     })
 }

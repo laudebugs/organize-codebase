@@ -5,7 +5,7 @@ import { isNPM, prettier, eslint, commitlint, husky, commitizen, semanticRelease
 import { gitRepoInitialized, initializeRepo, executeConfig } from './helpers/functions.js'
 
 (async()=>{
-  console.log(chalk.cyan('Organize Codebases'))
+  console.log(chalk.cyan('\nLet\s organize your codebase.\n'))
 
   let isGitRepo = gitRepoInitialized()
   if(!isGitRepo) await initializeRepo()

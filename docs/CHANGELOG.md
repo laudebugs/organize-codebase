@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.2.0-beta.5](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2022-02-26)
+
+
+### Features
+
+* write to package.json ([f899243](https://github.com/lbugasu/organize-codebase/commit/f899243fef871c9c1948a16e1c903428aa44c6dc))
+
 # [1.2.0-beta.4](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2022-02-26)
 
 

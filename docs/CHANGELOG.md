@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.2.0-beta.6](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2022-02-26)
+
+
+### Bug Fixes
+
+* add to package.json not implemented ([6afa0bb](https://github.com/lbugasu/organize-codebase/commit/6afa0bbf606a5dfaf82bd6d76eb86b1ac26be271))
+
 # [1.2.0-beta.5](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2022-02-26)
 
 

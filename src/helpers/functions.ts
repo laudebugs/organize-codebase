@@ -5,6 +5,7 @@ import inquirer from 'inquirer'
 import { CLICommand, ICommand } from '../interfaces/command'
 import spawn from 'cross-spawn'
 import chalk from 'chalk'
+import { editToPackageJson } from './write-to-package.json.js'
 
 /* Create the prompter */
 const prompt = inquirer.createPromptModule()
@@ -82,6 +83,11 @@ export async function executeConfig(config: ICommand) {
                     writeFile(fileName, content)
                 })
             }
+        }
+        if(config.packageJsonEntries){
+            config.packageJsonEntries.forEach(({key, item}) => {
+                editToPackageJson(key, item)
+            })
         }
         if(config.successMessage) console.log(chalk.grey(config.successMessage), chalk.green('✔'))
         return answers.proceed

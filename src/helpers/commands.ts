@@ -87,7 +87,7 @@ export const commitizen: ICommand = {
     name: 'proceed',
     message: 'Add Commitizen? (A Commandline utility for easily making commits)',
     commands: [{ command: 'npm', args: ['install', 'commitizen', '-D'] }, {
-        command: 'npx', args: ['init', 'cz-conventional-changelog','-D','--save-exact']
+        command: 'npx', args: ['commitizen', 'init', 'cz-conventional-changelog','-D','--save-exact']
     }],
     packageJsonEntries: [
         {

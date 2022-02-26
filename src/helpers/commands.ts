@@ -13,7 +13,14 @@ export const prettier: ICommand = {
     name: 'proceed',
     message: 'Install Prettier? (Standardize code format: tabs, spaces, semi-colons, e.t.c)',
     commands: [{ command: 'npm', args: ['install', 'prettier', '-D'] }],
-    writeToFile: ['.prettierrc.json'],
+    writeToFile: [{fileName: '.prettierrc.json', content: `{
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true,
+        "printWidth": 130
+    }
+    `} ],
     successMessage: 'Installed Prettier and updated package.json.',
 }
 
@@ -32,7 +39,7 @@ export const commitlint: ICommand = {
     name: 'proceed',
     message: 'Install Commitlint? (Lint your commit messages)',
     commands: [{ command: 'npm', args: ['install', '@commitlint/cli', '@commitlint/config-conventional', '-D'] }],
-    writeToFile: ['commitlint.config.js'],
+    writeToFile: [{fileName: 'commitlint.config.js', content: `module.exports = {extends: ['@commitlint/config-conventional']}`}],
     successMessage: 'Installed Commitlint and updated package.json.',
 }
 

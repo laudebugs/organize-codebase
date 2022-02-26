@@ -5,7 +5,7 @@ export type ICommand = {
     name: string, 
     message: string, 
     commands?: CLICommand[],
-    writeToFile?: string[], 
+    writeToFile?: {fileName: string, content:string}[], 
     successMessage?: string,
 } & QuestionCollection
 

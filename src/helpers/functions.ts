@@ -30,9 +30,8 @@ export async function sh(cmd: string) {
  * Write to file
  * @param {string} filename
  */
-export function writeFile(filename: string) {
-    const file = fs.readFileSync(path.join(process.cwd(), `node_modules/organize-codebase/lib/${filename}`), 'utf8')
-    fs.writeFileSync(filename, file, 'utf8')
+export function writeFile(filename: string, content: string) {
+    fs.writeFileSync(filename, content, 'utf8')
     console.log(chalk.hex('#829CBC')(`░ Created ${filename} in base directory. ░`))
 }
 
@@ -46,7 +45,7 @@ export async function initializeRepo() {
         type: 'confirm',
         name: 'proceed',
         message: 'Looks like the current directory isn\'t a git repository. Would you like to initialize an new git repository?',
-        writeToFile: ['.gitignore'],
+        writeToFile: [{fileName: '.gitignore', content: `node_modules\n`}],
     }
     return await executeConfig(initCommand).then(async (result)=>{
         if (result) {
@@ -79,8 +78,8 @@ export async function executeConfig(config: ICommand) {
                 })
             }
             if (config.writeToFile) {
-                config.writeToFile.forEach((file: string) => {
-                    writeFile(file)
+                config.writeToFile.forEach(({fileName, content}) => {
+                    writeFile(fileName, content)
                 })
             }
         }

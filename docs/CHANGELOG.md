@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.2.0-beta.4](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2022-02-26)
+
+
+### Bug Fixes
+
+* issue with creating .gitignore, commitlint, prettier files ([904c0a4](https://github.com/lbugasu/organize-codebase/commit/904c0a470165c686e7951fa4cfab1a03979fcdc5))
+
 # [1.2.0-beta.3](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2022-02-24)
 
 

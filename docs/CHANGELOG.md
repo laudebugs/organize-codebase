@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.2.0-beta.7](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2022-02-26)
+
+
+### Features
+
+* handle errors gracefully ([ca275e5](https://github.com/lbugasu/organize-codebase/commit/ca275e5d01e00902a4a5578b150414cd43dd8668))
+
 # [1.2.0-beta.6](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2022-02-26)
 
 

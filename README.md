@@ -2,7 +2,7 @@
 
 <p>
   <a href="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml" target="_blank">
-    <img alt="Version" src="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml/badge.svg">
+    <img alt="Release Pipeline" src="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml/badge.svg">
   </a>
   <a href="https://www.npmjs.com/package/organize-codebase" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/organize-codebase.svg">
@@ -10,11 +10,11 @@
   <a href="https://github.com/lbugasu/organize-codebase#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
+  <a href="https://github.com/semantic-release/semantic-release" target="_blank">
+    <img alt="Semantic Release: Angular" src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release" />
+  </a>
   <a href="https://github.com/lbugasu/organize-codebase/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/lbugasu/organize-codebase/blob/master/docs/LICENSE.txt" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/github/license/lbugasu/organize-codebase" />
   </a>
   <a href="https://twitter.com/lbugasu" target="_blank">
     <img alt="Twitter: lbugasu" src="https://img.shields.io/twitter/follow/lbugasu.svg?style=social" />
@@ -25,17 +25,28 @@
 
 ### 🏠 [Homepage](https://github.com/lbugasu/organize-codebase)
 
-## Install
+## Description
+This Command Line Tool is useful to get up and running with the most common set ups when maintaining a JavaScript project. It handles setup of the following: 
+- [`prettier`](https://prettier.io/) - formatting code
+- [`eslint`](https://eslint.org/) - finds and fixes problems in your code
+- [`commitlint`](https://commitlint.js.org/#/) - for linting commit messages
+- [`commitizen`](http://commitizen.github.io/cz-cli/) - a cli tool to easily create good commit messages
+- [`husky`](https://typicode.github.io/husky/#/) - enforces good commit messages/code formatting
+- [`standard-version`](https://github.com/conventional-changelog/standard-version) or [`semantic-release`](https://semantic-release.gitbook.io/semantic-release/) - for npm packages
 
-```sh
-npm install organize-codebase
-```
 
 ## Usage
+As simple as running within your project directory:
 
 ```sh
 npx organize-codebase
 ```
+
+## TODO
+- [ ] Add commit commands to scripts of `package.json`
+- [ ] Add semantic-release config to `package.json`
+- [ ] Add ability to choose prettier format
+- [ ] Merge config formats if config format is found in the project
 
 ## Author
 

@@ -1,6 +1,6 @@
 {
   "name": "organize-codebase",
-  "version": "1.1.4",
+  "version": "1.2.0-beta.7",
   "description": "Quickly organize your codebase with useful automation tools in development",
   "main": "bin/organize-codebase.js",
   "bin": {
@@ -39,6 +39,7 @@
     "@types/cross-spawn": "^6.0.2",
     "@types/eslint": "^8.4.1",
     "@types/figlet": "^1.5.4",
+    "@types/inquirer": "^8.2.0",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
     "commitizen": "^4.2.4",
@@ -65,7 +66,6 @@
     }
   },
   "dependencies": {
-    "@types/inquirer": "^8.2.0",
     "chalk": "^5.0.0",
     "clear": "^0.1.0",
     "clui": "^0.3.6",
@@ -82,23 +82,40 @@
     "url": "https://github.com/lbugasu/organize-codebase.git"
   },
   "release": {
-    "branches":["+([0-9])?(.{+([0-9]),x}).x", "main", "next", {"name": "beta", "prerelease": true}, {"name": "alpha", "prerelease": true}],
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      "next",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "docs/CHANGELOG.md",
+          "changelogTitle": "# Changelog"
+        }
+      ],
       "@semantic-release/npm",
       [
-          "@semantic-release/changelog",
-          {
-              "changelogFile": "docs/CHANGELOG.md"
-          }
-      ],
-      [
-          "@semantic-release/git",
-          {
-              "assets": ["docs", "package.json", "package-lock.json"],
-              "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-          }
+        "@semantic-release/git",
+        {
+          "assets": [
+            "docs",
+            "package.json",
+            "package-lock.json"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
       ]
     ]
   }

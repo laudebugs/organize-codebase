@@ -5,9 +5,11 @@ export type ICommand = {
     name: string, 
     message: string, 
     commands?: CLICommand[],
-    writeToFile?: string[]
+    writeToFile?: {fileName: string, content:string}[], 
+    successMessage?: string,
+    packageJsonEntries?: {key: string, item: {[index: string]: string | Object}}[],
 } & QuestionCollection
 
 export type CLICommand = {
-    command: string, args: string[]
+    command: string, args: string[], successMessage?: string
 }

@@ -1,7 +1,60 @@
-# Change Log
+# Changelog
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+# [1.2.0-beta.7](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2022-02-26)
+
+
+### Features
+
+* handle errors gracefully ([ca275e5](https://github.com/lbugasu/organize-codebase/commit/ca275e5d01e00902a4a5578b150414cd43dd8668))
+
+# [1.2.0-beta.6](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.5...v1.2.0-beta.6) (2022-02-26)
+
+
+### Bug Fixes
+
+* add to package.json not implemented ([6afa0bb](https://github.com/lbugasu/organize-codebase/commit/6afa0bbf606a5dfaf82bd6d76eb86b1ac26be271))
+
+# [1.2.0-beta.5](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.4...v1.2.0-beta.5) (2022-02-26)
+
+
+### Features
+
+* write to package.json ([f899243](https://github.com/lbugasu/organize-codebase/commit/f899243fef871c9c1948a16e1c903428aa44c6dc))
+
+# [1.2.0-beta.4](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.3...v1.2.0-beta.4) (2022-02-26)
+
+
+### Bug Fixes
+
+* issue with creating .gitignore, commitlint, prettier files ([904c0a4](https://github.com/lbugasu/organize-codebase/commit/904c0a470165c686e7951fa4cfab1a03979fcdc5))
+
+# [1.2.0-beta.3](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.2...v1.2.0-beta.3) (2022-02-24)
+
+
+### Features
+
+* notification on completing setup ([6bd915d](https://github.com/lbugasu/organize-codebase/commit/6bd915d4036633f40a6c4c40eb9954943dbbbf75))
+
+# [1.2.0-beta.2](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.1...v1.2.0-beta.2) (2022-02-24)
+
+
+### Bug Fixes
+
+* shift dependencies to devDependencies ([e71c976](https://github.com/lbugasu/organize-codebase/commit/e71c9760c100c8599342cd7194f9c5789545a0e7))
+
+# [1.2.0-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.1.5-beta.1...v1.2.0-beta.1) (2022-02-24)
+
+
+### Features
+
+* show success messages on completing a config ([9e8c7fa](https://github.com/lbugasu/organize-codebase/commit/9e8c7fa65601db5e59198a8faf76b346ba7263d5))
+
+## [1.1.5-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.1.4...v1.1.5-beta.1) (2022-02-24)
+
+
+### Bug Fixes
+
+* import issues ([aca50f0](https://github.com/lbugasu/organize-codebase/commit/aca50f0e260951d8e203f54cd6902becf3689db7))
 
 ## [1.1.4](https://github.com/lbugasu/organize-codebase/compare/v1.1.3...v1.1.4) (2022-02-24)
 
@@ -54,6 +107,3 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * configurations ([b39b989](https://github.com/lbugasu/organize-codebase/commit/b39b989ff73966943f4166bcbc9581ec3ec9651d))
-
-
-

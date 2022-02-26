@@ -129,7 +129,7 @@ export const standardVersion: ICommand = {
     packageJsonEntries: [
         {
             key: 'scripts',
-            item: { release: 'standard-release' },
+            item: { release: 'standard-version' },
         },
     ],
 }

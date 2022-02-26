@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/lbugasu/organize-codebase/compare/v1.2.0...v1.2.1) (2022-02-26)
+
+
+### Bug Fixes
+
+* standard version script ([2ab606c](https://github.com/lbugasu/organize-codebase/commit/2ab606c3e61c34222922dc54f687865757be90c0))
+
 # [1.2.0](https://github.com/lbugasu/organize-codebase/compare/v1.1.4...v1.2.0) (2022-02-26)
 
 

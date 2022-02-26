@@ -13,14 +13,19 @@ export const prettier: ICommand = {
     name: 'proceed',
     message: 'Install Prettier? (Standardize code format: tabs, spaces, semi-colons, e.t.c)',
     commands: [{ command: 'npm', args: ['install', 'prettier', '-D'] }],
-    writeToFile: [{fileName: '.prettierrc.json', content: `{
+    writeToFile: [
+        {
+            fileName: '.prettierrc.json',
+            content: `{
         "trailingComma": "all",
         "tabWidth": 4,
         "semi": false,
         "singleQuote": true,
         "printWidth": 130
     }
-    `} ],
+    `,
+        },
+    ],
     successMessage: 'Installed Prettier and updated package.json.',
 }
 
@@ -39,7 +44,9 @@ export const commitlint: ICommand = {
     name: 'proceed',
     message: 'Install Commitlint? (Lint your commit messages)',
     commands: [{ command: 'npm', args: ['install', '@commitlint/cli', '@commitlint/config-conventional', '-D'] }],
-    writeToFile: [{fileName: 'commitlint.config.js', content: `module.exports = {extends: ['@commitlint/config-conventional']}`}],
+    writeToFile: [
+        { fileName: 'commitlint.config.js', content: `module.exports = {extends: ['@commitlint/config-conventional']}` },
+    ],
     successMessage: 'Installed Commitlint and updated package.json.',
 }
 
@@ -61,6 +68,16 @@ export const husky: ICommand = {
         { command: 'npx', args: ['husky', 'set', '.husky/pre-commit', '"npx pretty-quick --staged"'] },
     ],
     successMessage: 'Installed Husky, added pre-commit hooks and updated package.json.',
+    packageJsonEntries: [
+        {
+            key: 'husky',
+            item: {
+                hooks: {
+                    'prepare-commit-msg': 'exec < /dev/tty && git cz --hook || true',
+                },
+            },
+        },
+    ],
 }
 
 /* Commitizen
@@ -69,7 +86,15 @@ export const commitizen: ICommand = {
     type: 'confirm',
     name: 'proceed',
     message: 'Add Commitizen? (A Commandline utility for easily making commits)',
-    commands: [{ command: 'npm', args: ['install', 'commitizen', '-D'] }],
+    commands: [{ command: 'npm', args: ['install', 'commitizen', '-D'] }, {
+        command: 'npx', args: ['init', 'cz-conventional-changelog','-D','--save-exact']
+    }],
+    packageJsonEntries: [
+        {
+            key: 'scripts',
+            item: { commit: 'cz' },
+        },
+    ],
 }
 
 /* Semantic Release - Best for NPM Packages
@@ -85,6 +110,12 @@ export const semanticRelease: ICommand = {
         { command: 'npm', args: ['install', '@semantic-release/git', '-D'] },
     ],
     successMessage: 'Configured Semantic Release and updated package.json.',
+    packageJsonEntries: [
+        {
+            key: 'scripts',
+            item: { 'semantic-release': 'semantic-release' },
+        },
+    ],
 }
 
 /* Standard Version - Best for non npm projects
@@ -95,6 +126,12 @@ export const standardVersion: ICommand = {
     message: 'Configure Standard Version? (To Automate Versioning and Changelog Generation)',
     commands: [{ command: 'npm', args: ['install', 'standard-version', '-D'] }],
     successMessage: 'Installed Standard Version and updated package.json.',
+    packageJsonEntries: [
+        {
+            key: 'scripts',
+            item: { release: 'standard-release' },
+        },
+    ],
 }
 
 export const readMe: ICommand = {

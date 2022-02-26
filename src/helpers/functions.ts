@@ -73,23 +73,28 @@ export function gitRepoInitialized(): boolean {
 export async function executeConfig(config: ICommand) {
     return prompt(config).then(async (answers) => {
         if (answers.proceed) {
-            if (config.commands) {
-                config.commands.forEach(({ command, args, successMessage }: CLICommand) => {
-                    spawn.sync(command, args, { stdio: 'inherit' })
-                })
-            }
-            if (config.writeToFile) {
-                config.writeToFile.forEach(({fileName, content}) => {
-                    writeFile(fileName, content)
-                })
+            try {
+                if (config.commands) {
+                    config.commands.forEach(({ command, args, successMessage }: CLICommand) => {
+                        spawn.sync(command, args, { stdio: 'inherit' })
+                    })
+                }
+                if (config.writeToFile) {
+                    config.writeToFile.forEach(({fileName, content}) => {
+                        writeFile(fileName, content)
+                    })
+                }
+                if(config.packageJsonEntries){
+                    config.packageJsonEntries.forEach(({key, item}) => {
+                        editToPackageJson(key, item)
+                    })
+                }
+                if(config.successMessage) console.log(chalk.grey(config.successMessage), chalk.green('✔'))     
+            } catch (error: any) {
+                console.log(chalk.red('✘'), chalk.grey(error?.message))
             }
         }
-        if(config.packageJsonEntries){
-            config.packageJsonEntries.forEach(({key, item}) => {
-                editToPackageJson(key, item)
-            })
-        }
-        if(config.successMessage) console.log(chalk.grey(config.successMessage), chalk.green('✔'))
+        
         return answers.proceed
     })
 }

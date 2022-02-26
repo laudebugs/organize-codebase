@@ -86,16 +86,10 @@ export const commitizen: ICommand = {
     type: 'confirm',
     name: 'proceed',
     message: 'Add Commitizen? (A Commandline utility for easily making commits)',
-    commands: [{ command: 'npm', args: ['install', 'commitizen', '-D'] }],
+    commands: [{ command: 'npm', args: ['install', 'commitizen', '-D'] }, {
+        command: 'npx', args: ['init', 'cz-conventional-changelog','-D','--save-exact']
+    }],
     packageJsonEntries: [
-        {
-            key: 'config',
-            item: {
-                commitizen: {
-                    path: './node_modules/cz-conventional-changelog',
-                },
-            },
-        },
         {
             key: 'scripts',
             item: { commit: 'cz' },

@@ -1,6 +1,6 @@
 {
   "name": "organize-codebase",
-  "version": "1.2.2",
+  "version": "1.3.0-beta.1",
   "description": "Quickly organize your codebase with useful automation tools in development",
   "main": "bin/organize-codebase.js",
   "bin": {

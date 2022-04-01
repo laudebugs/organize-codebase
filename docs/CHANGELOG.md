@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.3.0-beta.1](https://github.com/lbugasu/organize-codebase/compare/v1.2.2...v1.3.0-beta.1) (2022-04-01)
+
+
+### Features
+
+* detect whether using yarn or npm ([#8](https://github.com/lbugasu/organize-codebase/issues/8)) ([943f730](https://github.com/lbugasu/organize-codebase/commit/943f7300447be6e896d5a2ef04f1c8ee828786f7))
+
 ## [1.2.2](https://github.com/lbugasu/organize-codebase/compare/v1.2.1...v1.2.2) (2022-04-01)
 
 

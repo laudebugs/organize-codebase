@@ -1,6 +1,6 @@
 import { ICommand } from '../interfaces/command'
 
-export const isNPM: ICommand = {
+export const isNPMPackage: ICommand = {
     type: 'confirm',
     name: 'proceed',
     message: 'Is your project a package to be published to npm?',
@@ -16,14 +16,17 @@ export const prettier: ICommand = {
     writeToFile: [
         {
             fileName: '.prettierrc.json',
-            content: `{
-        "trailingComma": "all",
-        "tabWidth": 4,
-        "semi": false,
-        "singleQuote": true,
-        "printWidth": 130
-    }
-    `,
+            content: JSON.stringify(
+                {
+                    trailingComma: 'all',
+                    tabWidth: 4,
+                    semi: false,
+                    singleQuote: true,
+                    printWidth: 130,
+                },
+                null,
+                4,
+            ),
         },
     ],
     successMessage: 'Installed Prettier and updated package.json.',
@@ -35,6 +38,14 @@ export const eslint: ICommand = {
     name: 'proceed',
     message: 'Install Eslint? (Find and fix problems in your codebase)',
     commands: [{ command: 'npm', args: ['init', '@eslint/config'] }],
+}
+
+// NPM Init
+export const npmInit: ICommand = {
+    type: 'confirm',
+    name: 'proceed',
+    message: 'Initialized a package.json file?',
+    commands: [{ command: 'npm', args: ['init', '-y'] }],
 }
 
 /* Commitlint */
@@ -86,9 +97,13 @@ export const commitizen: ICommand = {
     type: 'confirm',
     name: 'proceed',
     message: 'Add Commitizen? (A Commandline utility for easily making commits)',
-    commands: [{ command: 'npm', args: ['install', 'commitizen', '-D'] }, {
-        command: 'npx', args: ['commitizen', 'init', 'cz-conventional-changelog','-D','--save-exact']
-    }],
+    commands: [
+        { command: 'npm', args: ['install', 'commitizen', '-D'] },
+        {
+            command: 'npx',
+            args: ['commitizen', 'init', 'cz-conventional-changelog', '-D', '--save-exact'],
+        },
+    ],
     packageJsonEntries: [
         {
             key: 'scripts',

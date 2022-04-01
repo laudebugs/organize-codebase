@@ -65,7 +65,7 @@ export const husky: ICommand = {
         /* Prettier Hook using pretty-quick: 
        https://prettier.io/docs/en/precommit.html#option-2-pretty-quickhttpsgithubcomazzpretty-quick */
         { command: 'npm', args: ['install', 'pretty-quick', '-D'] },
-        { command: 'npx', args: ['husky', 'set', '.husky/pre-commit', '"npx pretty-quick --staged"'] },
+        { command: 'npx', args: ['husky', 'set', '.husky/pre-commit', 'npx pretty-quick --staged'] },
     ],
     successMessage: 'Installed Husky, added pre-commit hooks and updated package.json.',
     packageJsonEntries: [

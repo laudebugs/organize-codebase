@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.2.2](https://github.com/lbugasu/organize-codebase/compare/v1.2.1...v1.2.2) (2022-04-01)
+
+
+### Bug Fixes
+
+* prettier husky hook ([#4](https://github.com/lbugasu/organize-codebase/issues/4)) ([f328024](https://github.com/lbugasu/organize-codebase/commit/f3280241285fdcbe13b12d70c0af15b95594a5bc))
+
+## [1.2.1](https://github.com/lbugasu/organize-codebase/compare/v1.2.0...v1.2.1) (2022-02-26)
+
+
+### Bug Fixes
+
+* standard version script ([2ab606c](https://github.com/lbugasu/organize-codebase/commit/2ab606c3e61c34222922dc54f687865757be90c0))
+
+# [1.2.0](https://github.com/lbugasu/organize-codebase/compare/v1.1.4...v1.2.0) (2022-02-26)
+
+
+### Bug Fixes
+
+* add to package.json not implemented ([6afa0bb](https://github.com/lbugasu/organize-codebase/commit/6afa0bbf606a5dfaf82bd6d76eb86b1ac26be271))
+* import issues ([aca50f0](https://github.com/lbugasu/organize-codebase/commit/aca50f0e260951d8e203f54cd6902becf3689db7))
+* issue with creating .gitignore, commitlint, prettier files ([904c0a4](https://github.com/lbugasu/organize-codebase/commit/904c0a470165c686e7951fa4cfab1a03979fcdc5))
+* shift dependencies to devDependencies ([e71c976](https://github.com/lbugasu/organize-codebase/commit/e71c9760c100c8599342cd7194f9c5789545a0e7))
+
+
+### Features
+
+* handle errors gracefully ([ca275e5](https://github.com/lbugasu/organize-codebase/commit/ca275e5d01e00902a4a5578b150414cd43dd8668))
+* notification on completing setup ([6bd915d](https://github.com/lbugasu/organize-codebase/commit/6bd915d4036633f40a6c4c40eb9954943dbbbf75))
+* show success messages on completing a config ([9e8c7fa](https://github.com/lbugasu/organize-codebase/commit/9e8c7fa65601db5e59198a8faf76b346ba7263d5))
+* write to package.json ([f899243](https://github.com/lbugasu/organize-codebase/commit/f899243fef871c9c1948a16e1c903428aa44c6dc))
+
 # [1.2.0-beta.7](https://github.com/lbugasu/organize-codebase/compare/v1.2.0-beta.6...v1.2.0-beta.7) (2022-02-26)
 
 

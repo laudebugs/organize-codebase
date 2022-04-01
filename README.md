@@ -36,17 +36,18 @@ This Command Line Tool is useful to get up and running with the most common set 
 
 
 ## Usage
-As simple as running within your project directory:
+As simple as running the following command within your project directory:
 
 ```sh
 npx organize-codebase
 ```
 
 ## TODO
-- [ ] Add commit commands to scripts of `package.json`
-- [ ] Add semantic-release config to `package.json`
+- [x] Add commit commands to scripts of `package.json`
+- [x] Add semantic-release config to `package.json`
 - [ ] Add ability to choose prettier format
 - [ ] Merge config formats if config format is found in the project
+- [ ] Add ability to add more ESLint plugins after setting up ESLint
 
 ## Author
 
@@ -58,7 +59,7 @@ npx organize-codebase
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/lbugasu/organize-codebase/issues). You can also take a look at the [contributing guide](https://github.com/lbugasu/organize-codebase/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/lbugasu/organize-codebase/issues). You can also take a look at the [contributing guide](https://github.com/lbugasu/organize-codebase/blob/master/docs/CONTRIBUTING.md).
 
 ## Show your support
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/lbugasu/organize-codebase/compare/v1.2.1...v1.2.2) (2022-04-01)
+
+
+### Bug Fixes
+
+* prettier husky hook ([#4](https://github.com/lbugasu/organize-codebase/issues/4)) ([f328024](https://github.com/lbugasu/organize-codebase/commit/f3280241285fdcbe13b12d70c0af15b95594a5bc))
+
 ## [1.2.1](https://github.com/lbugasu/organize-codebase/compare/v1.2.0...v1.2.1) (2022-02-26)
 
 

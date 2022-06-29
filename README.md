@@ -1,29 +1,29 @@
 <h1 align="center">Welcome to organize-codebase 👋</h1>
 
 <p>
-  <a href="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml" target="_blank">
-    <img alt="Release Pipeline" src="https://github.com/lbugasu/organize-codebase/actions/workflows/release.yml/badge.svg">
+  <a href="https://github.com/laudebugs/organize-codebase/actions/workflows/release.yml" target="_blank">
+    <img alt="Release Pipeline" src="https://github.com/laudebugs/organize-codebase/actions/workflows/release.yml/badge.svg">
   </a>
   <a href="https://www.npmjs.com/package/organize-codebase" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/organize-codebase.svg">
   </a>
-  <a href="https://github.com/lbugasu/organize-codebase#readme" target="_blank">
+  <a href="https://github.com/laudebugs/organize-codebase#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://github.com/semantic-release/semantic-release" target="_blank">
     <img alt="Semantic Release: Angular" src="https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release" />
   </a>
-  <a href="https://github.com/lbugasu/organize-codebase/graphs/commit-activity" target="_blank">
+  <a href="https://github.com/laudebugs/organize-codebase/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://twitter.com/lbugasu" target="_blank">
-    <img alt="Twitter: lbugasu" src="https://img.shields.io/twitter/follow/lbugasu.svg?style=social" />
+  <a href="https://twitter.com/laudebugs" target="_blank">
+    <img alt="Twitter: laudebugs" src="https://img.shields.io/twitter/follow/laudebugs.svg?style=social" />
   </a>
 </p>
 
 > Quickly organize your codebase with useful automation tools in development
 
-### 🏠 [Homepage](https://github.com/lbugasu/organize-codebase)
+### 🏠 [Homepage](https://github.com/laudebugs/organize-codebase)
 
 ## Description
 This Command Line Tool is useful to get up and running with the most common set ups when maintaining a JavaScript project. It handles setup of the following: 
@@ -54,12 +54,12 @@ npx organize-codebase
 👤 **Laurence B. Ininda**
 
 * Website: https://laudebugs.me
-* Twitter: [@lbugasu](https://twitter.com/lbugasu)
-* Github: [@lbugasu](https://github.com/lbugasu)
+* Twitter: [@laudebugs](https://twitter.com/laudebugs)
+* Github: [@laudebugs](https://github.com/laudebugs)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/lbugasu/organize-codebase/issues). You can also take a look at the [contributing guide](https://github.com/lbugasu/organize-codebase/blob/master/docs/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/laudebugs/organize-codebase/issues). You can also take a look at the [contributing guide](https://github.com/laudebugs/organize-codebase/blob/master/docs/CONTRIBUTING.md).
 
 ## Show your support
 
@@ -67,8 +67,8 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Laurence B. Ininda](https://github.com/lbugasu).<br />
-This project is [ISC](https://github.com/lbugasu/organize-codebase/blob/master/LICENSE) licensed.
+Copyright © 2022 [Laurence B. Ininda](https://github.com/laudebugs).<br />
+This project is [ISC](https://github.com/laudebugs/organize-codebase/blob/master/LICENSE) licensed.
 
 ***
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
